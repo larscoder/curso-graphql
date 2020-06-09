@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const { graphql, buildSchema } = require('graphql');
+const { graphql, buildSchema } = require('graphql')
 
 // Definiendo el esquema
 const schema = buildSchema(`
@@ -8,7 +8,7 @@ const schema = buildSchema(`
     hello: String
     saludo: String
   }
-`);
+`)
 
 // Configurar los resolves
 const resolves = {
@@ -18,12 +18,12 @@ const resolves = {
   saludo: () => {
     return 'Este es un saludo'
   }
-};
+}
 
 // Ejecutar el query hello
 graphql(schema, '{ hello }', resolves).then((data) => {
-  console.log(data);
-});
+  console.log(data)
+})
 graphql(schema, '{ saludo }', resolves).then((data) => {
-  console.log(data);
-});
+  console.log(data)
+})
