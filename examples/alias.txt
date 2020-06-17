@@ -1,0 +1,22 @@
+{
+  AllCourses: getCourses {
+    _id
+    title
+    people {
+      _id
+      name
+      email
+    }
+  }
+
+  Course1: getCourse(id: "5eea0f6447e0b6fec60e0050") {
+    _id
+    title
+  }
+
+
+  Course2: getCourse(id: "5ee2263f1ad2fe77e862022c") {
+    _id
+    title
+  }
+}
