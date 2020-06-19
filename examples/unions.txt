@@ -1,0 +1,18 @@
+{
+  searchItems(keyword: "luis") {
+    __typename
+    ...on Course {
+      title
+      description
+      teacher
+    }
+    ...on Monitor {
+      name
+      phone
+    }
+    ...on Student {
+      name
+      email
+    }
+  }
+}
